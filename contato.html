@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <title>Contato</title>
+</head>
+<body>
+   
+    <header>
+        <h1>Não Se Cale</h1>
+        <p>Rompendo o silêncio contra a violência doméstica</p>
+        <a href="tel:180" class="emergency-button">PRECISA DE AJUDA AGORA? LIGUE 180</a>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#leis">Leis e Direitos</a>
+            <a href="#denuncia">Como Denunciar</a>
+            <a href="#recursos">Recursos de Apoio</a>
+            <a href="contato.html">Contato</a>
+    </header>
+     <div class="container">
+    <main>
+        <h2>Entre em Contato Conosco</h2>
+        <p>Se você tem alguma dúvida, sugestão ou precisa de mais informações, preencha o formulário abaixo e entraremos em contato.</p>
+    </main>
+    <div>
+            <form action="contato.php" method="POST" style="max-width: 600px; margin: auto;">
+                <div style="margin-bottom: 15px;">
+                    <label for="nome">Nome (opcional):</label>
+                    <input type="text" id="nome" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="email">E-mail (opcional):</label>
+                    <input type="email" id="email" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="4" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                </div>
+                
+                <button type="submit" style="background-color: #6a0dad; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">Enviar</button>
+            </form>
+
+    </div>
+    <footer>
+        <p>© 2025 Não Se Cale - Todos os direitos reservados</p>
+        <p>Este site é apenas informativo. Em caso de emergência, ligue para os números oficiais.</p>
+    </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
