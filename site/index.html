@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voz da Esperança - Combate à Violência Doméstica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Safety Exit Button (discreet) -->
+    <div class="safety-exit fixed top-4 right-4 bg-gray-200 p-2 rounded-full cursor-pointer z-50" 
+         onclick="window.open('https://www.google.com', '_blank')" 
+         title="Saída Segura">
+        <i class="fas fa-door-open text-gray-600"></i>
+    </div>
+
+    <!-- Header with Hero Section -->
+    <header class="hero-image text-white">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <img src="https://cdn-icons-png.flaticon.com/512/3184/3184933.png" alt="Mãos protegendo coração" class="h-20 mx-auto mb-6">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Você não está sozinha(o)</h1>
+                <p class="text-xl mb-8">A violência doméstica não é apenas física. Se você está em uma situação de abuso, ajuda está disponível.</p>
+                
+                <!-- Emergency Buttons -->
+                <div class="flex flex-col md:flex-row justify-center gap-4 mb-12">
+                    <button onclick="callEmergency()" class="emergency-btn bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-8 rounded-full flex items-center justify-center gap-2">
+                        <i class="fas fa-phone-alt"></i> LIGUE PARA A POLÍCIA (190)
+                    </button>
+                    <button onclick="showHelpOptions()" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-4 px-8 rounded-full flex items-center justify-center gap-2">
+                        <i class="fas fa-hands-helping"></i> PRECISO DE AJUDA
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- What is Domestic Violence Section -->
+        <section class="mb-16 fade-in">
+            <h2 class="text-3xl font-bold text-center mb-8 text-purple-900">O que é Violência Doméstica?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3481/3481397.png" alt="Violência física" class="h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-3">Violência Física</h3>
+                    <p class="text-gray-700">Qualquer forma de agressão corporal como tapas, socos, chutes ou uso de objetos para ferir.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3481/3481329.png" alt="Violência psicológica" class="h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-3">Violência Psicológica</h3>
+                    <p class="text-gray-700">Humilhação, ameaças, controle excessivo e comportamentos que causam dano emocional.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3481/3481266.png" alt="Violência financeira" class="h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-3">Violência Financeira</h3>
+                    <p class="text-gray-700">Controle do dinheiro, proibição de trabalhar ou destruição de bens pessoais.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="mb-16 bg-purple-900 text-white rounded-lg p-8 fade-in">
+            <h2 class="text-3xl font-bold text-center mb-8">Estatísticas Alarmantes</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3161/3161837.png" alt="Vítimas" class="h-16 mx-auto mb-4">
+                    <p class="text-4xl font-bold mb-2">1 em 4</p>
+                    <p>mulheres sofre violência doméstica no Brasil</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3161/3161833.png" alt="Denúncias" class="h-16 mx-auto mb-4">
+                    <p class="text-4xl font-bold mb-2">+180 mil</p>
+                    <p>denúncias recebidas pelo Ligue 180 em 2022</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3161/3161839.png" alt="Feminicídio" class="h-16 mx-auto mb-4">
+                    <p class="text-4xl font-bold mb-2">1 a cada 7h</p>
+                    <p>uma mulher é vítima de feminicídio no país</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Help Resources Section -->
+        <section class="mb-16 fade-in">
+            <h2 class="text-3xl font-bold text-center mb-8 text-purple-900">Recursos de Ajuda</h2>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/3176/3176246.png" alt="Central de atendimento" class="h-12 mb-4">
+                            <h3 class="text-xl font-semibold mb-4 text-purple-800">Central de Atendimento à Mulher</h3>
+                            <p class="mb-4">Ligue 180 para denunciar violência doméstica e receber orientação.</p>
+                            <button onclick="call180()" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full">
+                                <i class="fas fa-phone mr-2"></i> Ligue 180
+                            </button>
+                        </div>
+                        <div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/3176/3176255.png" alt="Disque denúncia" class="h-12 mb-4">
+                            <h3 class="text-xl font-semibold mb-4 text-purple-800">Disque Denúncia</h3>
+                            <p class="mb-4">Denuncie anonimamente pelo número 181.</p>
+                            <button onclick="call181()" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full">
+                                <i class="fas fa-phone mr-2"></i> Ligue 181
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="mb-16 fade-in">
+            <div class="testimonial-card rounded-lg shadow-lg p-8">
+                <div class="max-w-3xl mx-auto text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="Depoimento" class="h-16 mx-auto mb-6">
+                    <blockquote class="text-xl italic mb-6">
+                        "Eu achava que aguentar era prova de amor, até perceber que amor não dói. Quando liguei para o 180, descobri que tinha direitos e que merecia ajuda. Hoje estou reconstruindo minha vida."
+                    </blockquote>
+                    <p class="font-semibold">— Ana, 34 anos</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Plan Section (initially hidden) -->
+        <section id="safetyPlan" class="hidden-info mb-16 bg-purple-50 p-8 rounded-lg">
+            <h2 class="text-3xl font-bold text-center mb-8 text-purple-900">Plano de Segurança</h2>
+            <div class="max-w-3xl mx-auto">
+                <img src="https://cdn-icons-png.flaticon.com/512/3481/3481961.png" alt="Plano de segurança" class="h-16 mx-auto mb-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-3 text-purple-800">1. Em caso de emergência</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Memorize números de emergência ou guarde-os em local seguro</li>
+                        <li>Combine um código com amigos/familiares para pedir ajuda discretamente</li>
+                        <li>Identifique saídas seguras em sua casa</li>
+                    </ul>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-3 text-purple-800">2. Documentos importantes</h3>
+                    <p>Mantenha cópias em local seguro ou com pessoa de confiança:</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
+                        <span class="bg-white px-3 py-1 rounded-full text-sm shadow">RG/CPF</span>
+                        <span class="bg-white px-3 py-1 rounded-full text-sm shadow">Certidões</span>
+                        <span class="bg-white px-3 py-1 rounded-full text-sm shadow">Comprovantes</span>
+                        <span class="bg-white px-3 py-1 rounded-full text-sm shadow">Contatos</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-purple-800">3. Se precisar sair rapidamente</h3>
+                    <p>Tenha uma mochila pronta com:</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mt-3">
+                        <span class="bg-white px-3 py-1 rounded-full text-sm shadow">Remédios</span>
+                        <span class="bg-white px-3 py-1 rounded-full text-sm shadow">Chaves</span>
+                        <span class="bg-white px-3 py-1 rounded-full text-sm shadow">Dinheiro</span>
+                        <span class="bg-white px-3 py-1 rounded-full text-sm shadow">Roupas</span>
+                        <span class="bg-white px-3 py-1 rounded-full text-sm shadow">Itens pessoais</span>
+                        <span class="bg-white px-3 py-1 rounded-full text-sm shadow">Documentos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-16 fade-in">
+            <h2 class="text-3xl font-bold text-center mb-8 text-purple-900">Perguntas Frequentes</h2>
+            <img src="https://cdn-icons-png.flaticon.com/512/3176/3176276.png" alt="Perguntas frequentes" class="h-16 mx-auto mb-6">
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white p-5 rounded-lg shadow-md">
+                    <button onclick="toggleFAQ(1)" class="w-full flex justify-between items-center text-left">
+                        <span class="font-semibold text-lg">Como posso ajudar alguém que está sofrendo violência?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="faq1" class="mt-3 hidden text-gray-700">
+                        <p>• Ouça sem julgamentos e acredite na pessoa</p>
+                        <p>• Não pressione, mas ofereça apoio</p>
+                        <p>• Informe sobre os serviços de ajuda disponíveis</p>
+                        <p>• Ajude a criar um plano de segurança</p>
+                        <p>• Se for uma emergência, chame a polícia</p>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-md">
+                    <button onclick="toggleFAQ(2)" class="w-full flex justify-between items-center text-left">
+                        <span class="font-semibold text-lg">Quais são os meus direitos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="faq2" class="mt-3 hidden text-gray-700">
+                        <p>• Lei Maria da Penha: protege contra violência doméstica</p>
+                        <p>• Direito a medidas protetivas</p>
+                        <p>• Acesso a serviços especializados</p>
+                        <p>• Atendimento prioritário em delegacias</p>
+                        <p>• Acolhimento em abrigos se necessário</p>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-md">
+                    <button onclick="toggleFAQ(3)" class="w-full flex justify-between items-center text-left">
+                        <span class="font-semibold text-lg">Como denunciar anonimamente?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="faq3" class="mt-3 hidden text-gray-700">
+                        <p>• Disque Denúncia: 181</p>
+                        <p>• Delegacias especializadas</p>
+                        <p>• Ministério Público</p>
+                        <p>• Aplicativos como "Salve Maria" (em alguns estados)</p>
+                        <p>Lembre-se: mesmo anônimas, denúncias são investigadas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Exit Banner -->
+        <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-8 rounded flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/3184/3184934.png" alt="Saída segura" class="h-12 mr-4">
+                <div>
+                    <p class="font-bold">Precisa sair rapidamente?</p>
+                    <p>Clique no botão "Saída Segura" no canto superior direito para ser redirecionado(a) para outro site.</p>
+                </div>
+            </div>
+            <button onclick="window.open('https://www.google.com', '_blank')" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full">
+                <i class="fas fa-running mr-2"></i> Sair Agora
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-purple-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0 flex items-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3184/3184933.png" alt="Logo" class="h-10 mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Voz da Esperança</h3>
+                        <p>Juntos contra a violência doméstica</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <button onclick="callEmergency()" class="bg-red-500 hover:bg-red-600 text-white p-3 rounded-full">
+                        <i class="fas fa-phone-alt"></i>
+                    </button>
+                    <button onclick="call180()" class="bg-purple-700 hover:bg-purple-800 text-white p-3 rounded-full">
+                        <i class="fas fa-phone-volume"></i>
+                    </button>
+                    <button onclick="showHelpOptions()" class="bg-white hover:bg-gray-200 text-purple-900 p-3 rounded-full">
+                        <i class="fas fa-question"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-sm">
+                <p>© 2025 Voz da Esperança. Este site é seguro e não armazena dados dos visitantes.</p>
+                <p class="mt-2">Em caso de emergência, ligue 190 (Polícia) ou 180 (Central de Atendimento à Mulher).</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Help Modal (hidden by default) -->
+    <div id="helpModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-purple-900">Precisa de ajuda?</h3>
+                    <button onclick="closeHelpModal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <img src="https://cdn-icons-png.flaticon.com/512/3184/3184933.png" alt="Ajuda" class="h-16 mx-auto mb-6">
+                <div class="space-y-4">
+                    <button onclick="callEmergency()" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 rounded flex items-center justify-center gap-2">
+                        <i class="fas fa-phone-alt"></i> Emergência (190)
+                    </button>
+                    <button onclick="call180()" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded flex items-center justify-center gap-2">
+                        <i class="fas fa-phone-volume"></i> Central da Mulher (180)
+                    </button>
+                    <button onclick="showSafetyPlan()" class="w-full bg-purple-100 hover:bg-purple-200 text-purple-900 font-bold py-3 px-4 rounded flex items-center justify-center gap-2">
+                        <i class="fas fa-shield-alt"></i> Plano de Segurança
+                    </button>
+                    <button onclick="window.open('https://www.gov.br/mdh/pt-br/navegue-por-topicos/politicas-para-mulheres/ligue-180', '_blank')" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-4 rounded flex items-center justify-center gap-2">
+                        <i class="fas fa-info-circle"></i> Mais Informações
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
