@@ -80,3 +80,17 @@ function setupSafetyExit() {
 
 // Initialize safety exit on DOM load
 document.addEventListener('DOMContentLoaded', setupSafetyExit);
+function toggleFAQ(id) {
+    const faq = document.getElementById(`faq${id}`);
+    const isVisible = !faq.classList.contains('hidden');
+
+    // Opcional: esconder todos os outros FAQs abertos
+    document.querySelectorAll('[id^="faq"]').forEach(el => {
+      el.classList.add('hidden');
+    });
+
+    // Alternar visibilidade do selecionado
+    if (!isVisible) {
+      faq.classList.remove('hidden');
+    }
+  }
